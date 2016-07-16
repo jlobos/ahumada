@@ -1,6 +1,6 @@
 {
   "name": "ahumada",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Api pública del servicio de Buses Ahumada (Chile)",
   "license": "MIT",
   "repository": "jlobos/ahumada",

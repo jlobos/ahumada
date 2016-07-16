@@ -142,7 +142,7 @@ class Ahumada {
       form: { id_servicio_salida: idServicioSalida }
     }, (err, body) => {
       const $ = load(body)
-      const seats = $('.tabla_bus2 table').children().map((i, rows) => {
+      let seats = $('.tabla_bus2 table').children().map((i, rows) => {
         // guarda valor previo (nombre de clase css)
         let prev
 
@@ -161,6 +161,10 @@ class Ahumada {
 
         return seats
       }).get()
+
+      if (seats.length > 0) {
+        seats.sort((a, b) => a.asiento - b.asiento)
+      }
 
       cb(err, seats)
     })
